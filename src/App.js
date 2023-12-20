@@ -21,30 +21,35 @@ const Resume = () => {
           applying the core principles of Dev(sec)Ops and SRE.
           Experienced with managing critical environments, supporting,
           and administrating networks, VMs and microservices
-          applications in Cloud, seeking opportunities as a Cloud Engineer
+          applications in Cloud, seeking opportunities as a Cloud Engineer.
         </p>
       </section>
+      <br />
       <section className="experience">
         <h2>Work Experience</h2>
         <p>
           Cloud Specialist <br />
           Cirion | JULY 2023 - Present <br />
-          - Developed and maintained web applications using React and Node.js.
+          Responsible for providing third-level support for Cloud operations for customers throughout Latin America (AWS/Azure/GCP). 
         </p>
+        <br />
         <p>
           Cloud Engineer <br />
           Falconi | MAY 2021 - JUNE 2023 <br />
-          - Developed and maintained web applications using React and Node.js.
+          Responsible for the infrastructure on-premises and in the Cloud
+          Architecting, supporting, and managing the Cloud environment (AWS, GCP
+          and Azure) using terraform, and CI/CD pipelines.
         </p>
+        <br />
         <p>
           Cloud Engineer <br />
           Fujitsu | JUNE 2018 - MARCH 2021 <br />
-          - Developed and maintained web applications using React and Node.js.
+          Responsible for supporting and managing customers' local cloud environment using VMWARE, Windows and Linux servers, as well as Cisco routers.
         </p>
+        <br />
         <p>
           Help Desk Analyst <br />
-          Burger King | JUNE 2016 - JUNE 2018 <br />
-          - Developed and maintained web applications using React and Node.js.
+          Burger King | JUNE 2016 - JUNE 2018
         </p>
       </section>
       <section className="education">
@@ -54,22 +59,32 @@ const Resume = () => {
           FIAP São Paulo, Graduation Year 2016
         </p>
       </section>
+      <br />
       <section className="certifications">
-        <h2>Education</h2>
-        <p>
-          Computer Networking <br />
-          FIAP São Paulo, Graduation Year 2016
-        </p>
+        <h2>Certifications</h2>
+        <li>Google Cloud Certified - Professional Cloud Architect</li>
+        <li>AWS Certified Cloud Practitioner</li>
+        <li>MCPS: Microsoft Certified Professional</li>
+        <li>SRE Foundation</li>
+        <li>Scrum Foundation Professional Certificate</li>
       </section>
+      <br />
       <section className="skills">
         <h2>Skills</h2>
+         <li>AWS</li>
+         <li>GCP</li>
+         <li>Azure</li>
+         <li>Terraform</li>
+         <li>Git</li>
+         <li>Python</li>
+      </section>
+      <br />
+      <section className="About the resume">
+        <h2>About this Webpage</h2>
         <ul>
-          <li>AWS</li>
-          <li>GCP</li>
-          <li>Azure</li>
-          <li>Terraform</li>
-          <li>Git</li>
-          <li>Python</li>
+          <p>
+            I will write here later.
+          </p>
         </ul>
       </section>
     </div>
