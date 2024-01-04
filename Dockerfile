@@ -21,3 +21,12 @@ ENV REACT_APP_API_URL=http://localhost:3001
 
 # Run the application
 CMD ["npm", "start"]
+
+# Nginx stage
+FROM nginx:latest
+
+# Copy nginx configuration file to the container
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Expose port 80 for the Nginx server
+EXPOSE 80
