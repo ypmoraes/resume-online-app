@@ -2,8 +2,7 @@ version: '3'
 
 services:
     nodejs-app:
-        build:
-            context: ./nodedocker_app
+        image: 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images:latest
         container_name: nodejsserver
         hostname: nodejsserver
         ports: 
