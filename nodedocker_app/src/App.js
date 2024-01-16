@@ -13,6 +13,7 @@ const Resume = () => {
         <p>Email: yuri_ppm@hotmail.com</p>
         <p>LinkedIn: linkedin.com/in/yuripiresmoraes</p>
         <p>GitHub: github.com/ypmoraes</p>
+        <p>Phone: +55 11 94224-1557</p>
       </section>
       <section className="About Me">
         <h2>About Me</h2>
