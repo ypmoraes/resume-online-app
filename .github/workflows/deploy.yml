@@ -7,10 +7,10 @@ on:
 jobs:
   deploy:
     name: Deploy to EC2
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
   
   steps:
-  - name: checkout the files
+  - name: Checkout the files
     uses: actions/checkout@v3
 
   - name: Copy files with SSH
