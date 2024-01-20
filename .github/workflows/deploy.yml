@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      
+
 jobs:
   deploy:
     name: Deploy to EC2
@@ -19,4 +19,4 @@ jobs:
         SOURCE: "./"
         REMOTE_HOST: "67.202.7.141"
         REMOTE_USER: "ec2-user"
-        TARGET: "/home/ec2-ser"
+        TARGET: "/home/ec2-user"
