@@ -1,5 +1,4 @@
-#comment just to try
-
+# comment just to try
 name: Push-to-EC2
 on:
   push:
@@ -13,6 +12,9 @@ jobs:
     steps:
     - name: Checkout the files
       uses: actions/checkout@v3
+
+    - name: Test SSH Connection
+      run: ssh -i <(echo "${{ secrets.EC2_SSH_KEY }}") ec2-user@67.202.7.141
 
     - name: Create a new file with SSH
       uses: easingthemes/ssh-deploy@main
