@@ -12,11 +12,11 @@ jobs:
     - name: Checkout the files
       uses: actions/checkout@v3
 
-    - name: Copy files with SSH
-      uses:  easingthemes/ssh-deploy@main
+    - name: Create a new file with SSH
+      uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
-        SOURCE: "./"
         REMOTE_HOST: "67.202.7.141"
         REMOTE_USER: "ec2-user"
-        TARGET: "/home/ec2-user"
+        RUN_COMMAND: |
+          echo "This is a new file created by GitHub Actions" > /home/ec2-user/newfile.txt
