@@ -1,0 +1,23 @@
+name: Push-to-EC2
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to EC2
+    runs-on: unbuntu-latest
+  
+  steps:
+  - name: checkout the files
+    uses: actions/checkout@v3
+
+  - name: Copy files with SSH
+    usess:  easingthemes/ssh-deploy@main
+    env:
+      SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
+      SOURCE: "./"
+      REMOTE_HOST: "67.202.7.141"
+      REMOTE_USER: "ec2-user"
+      TARGET: "/home/ec2-ser"
