@@ -15,7 +15,7 @@ jobs:
     - name: Create a new file with SSH
       uses: easingthemes/ssh-deploy@main
       env:
-        SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
+        SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
         REMOTE_HOST: "67.202.7.141"
         REMOTE_USER: "ec2-user"
         RUN_COMMAND: |
