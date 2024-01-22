@@ -12,10 +12,7 @@ jobs:
     steps:
     - name: Checkout the files
       uses: actions/checkout@v3
-
-    - name: Test SSH Connection
-      run: ssh -i <(echo "${{ secrets.BERNARD_SSH_KEY }}") bernard@67.202.7.141
-
+      
     - name: Create a new file with SSH
       uses: easingthemes/ssh-deploy@main
       env:
