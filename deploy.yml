@@ -1,23 +1,21 @@
-name: EC2 File Creation
+# comment just to try
+name: Push-to-EC2
 on:
   push:
     branches:
       - main
 
+#just to try 
 jobs:
-  create-file:
+  deploy:
+    name: Deploy to EC2
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    - name: Checkout the files
+      uses: actions/checkout@v3
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.BERNARD_SSH_KEY }}
-
-      - name: Create a new file with SSH
+    - name: Create a new file with SSH
+      uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{ secrets.BERNARD_SSH_KEY }}
         REMOTE_HOST: "67.202.7.141"
