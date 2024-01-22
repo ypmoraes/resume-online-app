@@ -15,7 +15,7 @@ jobs:
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.BERNARD_SSH_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.BERNARD_SSH_KEY }}
 
       - name: Create a new file with SSH
         uses: webfactory/ssh-agent@v0.5.3
