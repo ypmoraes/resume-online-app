@@ -18,9 +18,9 @@ jobs:
           ssh-private-key: ${{ secrets.BERNARD_SSH_KEY }}
 
       - name: Create a new file with SSH
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.BERNARD_SSH_KEY }}
-        REMOTE_HOST: "67.202.7.141"
-        REMOTE_USER: "bernard"
-        RUN_COMMAND: |
-          echo "This is a new file created by GitHub Actions" > /home/bernard/newfile.txt
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.BERNARD_SSH_KEY }}
+          REMOTE_HOST: "67.202.7.141"
+          REMOTE_USER: "bernard"
+          RUN_COMMAND: |
+            echo "This is a new file created by GitHub Actions" > /home/bernard/newfile.txt
