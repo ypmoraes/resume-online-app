@@ -1,0 +1,23 @@
+name: EC2 File Creation
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      #to be honest I have no Idea
+      - name: Create a new file with SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.BERNARD_SSH_KEY }}
+          REMOTE_HOST: "67.202.7.141"
+          REMOTE_USER: "bernard"
+          RUN_COMMAND: |
+            echo "This is a new file created by GitHub Actions" > /home/bernard/newfile.txt
