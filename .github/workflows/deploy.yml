@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Checkout the files
       uses: actions/checkout@v3
-      
+
     - name: create file
       uses: appleboy/ssh-action@v0.1.10
       with:
@@ -20,4 +20,4 @@ jobs:
         key: ${{ secrets.BERNARD_SSH_KEY }}
         port: "22"
         script: | 
-          echo "This is a new file created by GitHub Actions" > /home/bernard/newfile.txt
+          echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe.txt
