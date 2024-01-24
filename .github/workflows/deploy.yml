@@ -2,7 +2,9 @@ name: Push-to-EC2
 on:
   push:
     branches:
-      - main
+      -"main"
+env:
+  AWS_SERVER: ${{ env.AAWS_SERVER }}
 
 jobs:
   deploy:
