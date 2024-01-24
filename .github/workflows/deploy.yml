@@ -15,9 +15,9 @@ jobs:
     - name: create file
       uses: appleboy/ssh-action@v0.1.10
       with:
-        host: "67.202.7.141"
-        username: "bernard"
+        host: ${{ env.AWS_SERVER }}
+        username: ${{ env.EC2_USER }}
         key: ${{ secrets.BERNARD_SSH_KEY }}
-        port: "22"
+        port: ${{ env.EC2_PORT }}
         script: | 
-          echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe.txt
+          echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe_2.txt
