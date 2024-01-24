@@ -4,6 +4,9 @@ on:
     branches:
       - main
 
+env:
+  EC2_PORT: 22
+
 jobs:
   deploy:
     name: Deploy to EC2
@@ -21,6 +24,6 @@ jobs:
         host: ${{ secrets.AWS_SERVER }}
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.BERNARD_SSH_KEY }}
-        port: "22"
+        port: ${{ env.EC2_PORT }}
         script: | 
           echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe_2.txt
