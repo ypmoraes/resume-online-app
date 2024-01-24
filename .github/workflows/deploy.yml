@@ -10,7 +10,8 @@ jobs:
   deploy:
     name: Deploy to EC2
     runs-on: ubuntu-latest
-  
+    env:
+      AWS_SERVER: "67.202.7.141"
     steps:
     - name: Checkout the files
       uses: actions/checkout@v3
