@@ -10,8 +10,7 @@ jobs:
   deploy:
     name: Deploy to EC2
     runs-on: ubuntu-latest
-    env:
-      AWS_SERVER: "67.202.7.141"
+  
     steps:
     - name: Checkout the files
       uses: actions/checkout@v3
@@ -19,7 +18,7 @@ jobs:
     - name: create file
       uses: appleboy/ssh-action@v0.1.10
       with:
-        host: ${{ env.AWS_SERVER }}
+        host: ${{ secrets.AWS_SERVER }}
         username: "bernard"
         key: ${{ secrets.BERNARD_SSH_KEY }}
         port: "22"
