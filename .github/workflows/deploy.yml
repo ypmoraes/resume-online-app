@@ -3,6 +3,11 @@ on:
   push:
     branches:
       -main
+
+#testing the environments variables
+env:
+  AWS_SERVER: ${{ env.AWS_SERVER }}
+
 jobs:
   deploy:
     name: Deploy to EC2
