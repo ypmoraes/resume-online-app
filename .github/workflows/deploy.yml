@@ -4,7 +4,7 @@ on:
     branches:
       -"main"
 env:
-  AWS_SERVER: ${{ env.AAWS_SERVER }}
+  AWS_SERVER: ${{ env.AWS_SERVER }}
 
 jobs:
   deploy:
