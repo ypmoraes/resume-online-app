@@ -14,7 +14,8 @@ jobs:
     steps:
     - name: Checkout the files
       uses: actions/checkout@v3
-
+  
+  #testing with secrets
     - name: create file
       uses: appleboy/ssh-action@v0.1.10
       with:
