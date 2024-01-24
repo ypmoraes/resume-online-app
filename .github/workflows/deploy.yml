@@ -19,7 +19,7 @@ jobs:
       uses: appleboy/ssh-action@v0.1.10
       with:
         host: ${{ secrets.AWS_SERVER }}
-        username: ${{ secrets.EC_USER }}
+        username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.BERNARD_SSH_KEY }}
         port: "22"
         script: | 
