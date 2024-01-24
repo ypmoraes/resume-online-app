@@ -5,13 +5,13 @@ on:
       - main
 
 #testing the environments variables
-env:
-  AWS_SERVER: ${{ env.AWS_SERVER }}
 
 jobs:
   deploy:
     name: Deploy to EC2
     runs-on: ubuntu-latest
+    env:
+      AWS_SERVER: ${{ env.AWS_SERVER }}
     steps:
     - name: Checkout the files
       uses: actions/checkout@v3
