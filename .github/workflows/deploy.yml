@@ -25,9 +25,7 @@ jobs:
     
     -name: describe-repos
       run: |-
-          aws ecr describe-repositories    
-
- 
+          aws ecr describe-repositories
   #testing with secrets
   #Just testing
   #  - name: create file
