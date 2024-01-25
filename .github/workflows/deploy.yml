@@ -15,15 +15,25 @@ jobs:
     steps:
     - name: Checkout the files
       uses: actions/checkout@v3
-  
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+        run: |-
+          aws ecr describe-repositories
+
+ 
   #testing with secrets
   #Just testing
-    - name: create file
-      uses: appleboy/ssh-action@v0.1.10
-      with:
-        host: ${{ secrets.AWS_SERVER }}
-        username: ${{ secrets.EC2_USER }}
-        key: ${{ secrets.BERNARD_SSH_KEY }}
-        port: ${{ env.EC2_PORT }}
-        script: | 
-          echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe_2.txt
+  #  - name: create file
+  #    uses: appleboy/ssh-action@v0.1.10
+  #    with:
+  #      host: ${{ secrets.AWS_SERVER }}
+  #      username: ${{ secrets.EC2_USER }}
+  #      key: ${{ secrets.BERNARD_SSH_KEY }}
+  #      port: ${{ env.EC2_PORT }}
+  #      script: | 
+  #        echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe_2.txt
