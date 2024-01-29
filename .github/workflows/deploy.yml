@@ -33,6 +33,7 @@
           IMAGE_TAG: latest
         run: |
           docker build -t $REPOSITORY:$IMAGE_TAG -f nodedocker_app/dockerfile .
+          echo $REPOSITORY:IMAGE_TAG
       
       - name: Debug Docker Login
         run: |
