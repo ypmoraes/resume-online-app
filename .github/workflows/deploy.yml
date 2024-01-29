@@ -23,9 +23,17 @@
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       
-      - name: describe-repos
+      - name: Describe-Repos
         run: |-
             aws ecr describe-repositories
+
+      - name: Build, push docker image
+        env:
+          REPOSITORY: resume-online-app
+          IMAGE_TAG: "latest"
+        run: |-
+          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 634713741494.dkr.ecr.us-east-1.amazonaws.com
+
     #testing with secrets
     #Just testing
     #  - name: create file
