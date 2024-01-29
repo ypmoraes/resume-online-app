@@ -40,12 +40,12 @@
 
       - name: push docker image
         env:
-          REPOSITORY: resume-online-app/nodedocker_app
+          REPOSITORY: 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images
           IMAGE_TAG: latest
         run: |-
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 634713741494.dkr.ecr.us-east-1.amazonaws.com
-          docker push $REPOSITORY:$IMAGE_TAG
-
+          docker tag resume-images:latest 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images:latest
+          docker push 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images:latest
 
     #testing with secrets
     #Just testing
