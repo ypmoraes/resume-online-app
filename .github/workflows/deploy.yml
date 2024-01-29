@@ -27,6 +27,13 @@
         run: |-
             aws ecr describe-repositories
 
+      - name: Build Docker Image
+        env:
+          REPOSITORY: resume-online-app
+          IMAGE_TAG: "latest"
+        run: |
+          docker build -t $REPOSITORY:$IMAGE_TAG .
+
       - name: Build, push docker image
         env:
           REPOSITORY: resume-online-app
