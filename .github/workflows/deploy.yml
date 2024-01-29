@@ -33,8 +33,12 @@
           IMAGE_TAG: latest
         run: |
           docker build -t $REPOSITORY:$IMAGE_TAG -f nodedocker_app/dockerfile .
+      
+      - name: Debug Docker Login
+        run: |
+          echo "AWS CLI Version: $(aws --version)"
 
-      - name: Build, push docker image
+      - name: push docker image
         env:
           REPOSITORY: resume-online-app/nodedocker_app
           IMAGE_TAG: latest
