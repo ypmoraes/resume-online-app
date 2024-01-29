@@ -29,14 +29,14 @@
 
       - name: Build Docker Image
         env:
-          REPOSITORY: nodedocker_app
+          REPOSITORY: 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-online-app
           IMAGE_TAG: "latest"
         run: |
           docker build -t $REPOSITORY:$IMAGE_TAG .
 
       - name: Build, push docker image
         env:
-          REPOSITORY: nodedocker_app
+          REPOSITORY: 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-online-app
           IMAGE_TAG: "latest"
         run: |-
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 634713741494.dkr.ecr.us-east-1.amazonaws.com
