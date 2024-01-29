@@ -33,7 +33,7 @@
           IMAGE_TAG: latest
         run: |
           docker build -t $REPOSITORY:$IMAGE_TAG -f nodedocker_app/dockerfile .
-          echo $REPOSITORY:IMAGE_TAG
+          echo $REPOSITORY:$IMAGE_TAG
       
       - name: Debug Docker Login
         run: |
@@ -45,8 +45,8 @@
           IMAGE_TAG: latest
         run: |-
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 634713741494.dkr.ecr.us-east-1.amazonaws.com
-          docker tag resume-images:latest 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images:latest
-          docker push 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images:latest
+          docker tag resume-online-app/nodedocker_app:latest 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images:latest
+          docker push 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-online-app/nodedocker_app:latest
 
     #testing with secrets
     #Just testing
