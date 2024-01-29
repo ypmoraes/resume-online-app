@@ -40,7 +40,7 @@
           IMAGE_TAG: latest
         run: |-
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 634713741494.dkr.ecr.us-east-1.amazonaws.com
-          docker push $REPOSITORY:latest
+          docker push $REPOSITORY:$IMAGE_TAG
 
 
     #testing with secrets
