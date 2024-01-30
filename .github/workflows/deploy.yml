@@ -51,12 +51,12 @@
 
     #testing with secrets
     #Just testing
-    #  - name: create file
-    #    uses: appleboy/ssh-action@v0.1.10
-    #    with:
-    #      host: ${{ secrets.AWS_SERVER }}
-    #      username: ${{ secrets.EC2_USER }}
-    #      key: ${{ secrets.BERNARD_SSH_KEY }}
-    #      port: ${{ env.EC2_PORT }}
-    #      script: | 
-    #        echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe_2.txt
+      - name: create file
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.AWS_SERVER }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.BERNARD_SSH_KEY }}
+          port: ${{ env.EC2_PORT }}
+          script: | 
+            echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe_2.txt
