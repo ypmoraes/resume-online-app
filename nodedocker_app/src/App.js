@@ -84,7 +84,7 @@ const Resume = () => {
         <h2>About this Webpage</h2>
         <ul>
           <p>
-            This resume was created  100% by me, using the following tools: AWS ECR, GitHub, GitHub Actions, EC2, Docker and CloudFormation.
+            This resume was created  100% by me, using the following tools: AWS ECR, GitHub, GitHub Actions, EC2, Docker and CloudFormation. Reach me on e-mail for more information.
           </p>
         </ul>
       </section>
