@@ -22,22 +22,14 @@
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-      
-      - name: Describe-Repos
-        run: |-
-            aws ecr describe-repositories
 
       - name: Build Docker Image
         env:
           REPOSITORY: resume-online-app/nodedocker_app
           IMAGE_TAG: latest
         run: |
-          docker build -t $REPOSITORY:$IMAGE_TAG -f nodedocker_app/dockerfile .
+          docker build -t $REPOSITORY:$IMAGE_TAG -f nodedocker_app/ .
           echo $REPOSITORY:$IMAGE_TAG
-      
-      - name: Debug Docker Login
-        run: |
-          echo "AWS CLI Version: $(aws --version)"
 
       - name: push docker image
         env:
@@ -46,7 +38,7 @@
         run: |-
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 634713741494.dkr.ecr.us-east-1.amazonaws.com
           docker tag resume-online-app/nodedocker_app:latest 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images:latest
-          docker push $REPOSITORY:$IMAGE_TAG
+          docker push 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images:latest
           
 
     #testing with secrets
@@ -60,4 +52,4 @@
           key: ${{ secrets.BERNARD_SSH_KEY }}
           port: ${{ env.EC2_PORT }}
           script: | 
-            echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe_2.txt
+            echo "This is a new file created by GitHub Actions" > /home/bernard/we_love_Felipe_3.txt
