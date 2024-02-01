@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   nodejs-app:
     image: 634713741494.dkr.ecr.us-east-1.amazonaws.com/resume-images:latest
@@ -7,26 +9,21 @@ services:
       - "3000:3000"
     networks:
       - example-net
-    working_dir: /app  # Set the working directory to /app
-    command: npm start  # Specify the default command to run your Node.js app
-    # Include the following lines to copy package.json and package-lock.json
-    # into the image during the build process
-    build:
-      context: .
-      dockerfile: nodedocker_app/dockerfile  # Update with your actual Dockerfile location
+    working_dir: /app
+    command: npm start
 
-    nginx:
-        build:
-            context: ./nginx
-        container_name: nginx
-        hostname: nginx
-        ports:
-            - "80:80"
-        depends_on:
-            - nodejs-app
-        networks:
-            - example-net
+  nginx:
+    build:
+      context: ./nginx
+    container_name: nginx
+    hostname: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - nodejs-app
+    networks:
+      - example-net
 
 networks:
-    example-net:
-        external: true  
+  example-net:
+    external: true
