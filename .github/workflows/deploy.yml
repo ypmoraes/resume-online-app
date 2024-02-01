@@ -28,8 +28,8 @@
           REPOSITORY: resume-online-app/nodedocker_app
           IMAGE_TAG: latest
         run: |
-          docker build -t $REPOSITORY:$IMAGE_TAG -f nodedocker_app/ .
-          echo $REPOSITORY:$IMAGE_TAG
+          docker build -t resume-online-app/nodedocker_app:latest -f nodedocker_app/ .
+          echo resume-online-app/nodedocker_app:latest
 
       - name: push docker image
         env:
