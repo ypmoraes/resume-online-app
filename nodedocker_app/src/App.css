@@ -1,0 +1,72 @@
+/* src/App.css */
+
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Resume container */
+.resume {
+  max-width: 800px;
+  margin: 2rem auto;  /* Using rem for responsiveness */
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 2.5rem;
+}
+
+header p {
+  color: #7f8c8d;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* List items */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Links (optional) */
+a {
+  color: #3498db;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.2s ease-in-out;  /* Smooth hover effect */
+}
+
+a:hover {
+  color: #1abc9c;  /* Change color on hover */
+}
+
+/* Add more styling as needed */
