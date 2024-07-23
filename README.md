@@ -1,4 +1,3 @@
-Markdown
 ## **Interactive Resume & Technical Portfolio**
 
 Welcome to my resume! This project serves as a portfolio showcasing my technical skills and my willingness to learn new technologies.
