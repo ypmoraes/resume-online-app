@@ -14,12 +14,12 @@ Project Goals:
 
 Technologies Used:
 
-Node.js
-Docker
-Terraform
-AWS Tools (AWS EC2, S3, ECR.)
-GCP Tools (Cloud Run, Cloud Storage, Artifact Registry and Application Load Balancer)
-GitHub Actions (planned)
+- Node.js
+- Docker
+- Terraform
+- AWS Tools (AWS EC2, S3, ECR.)
+- GCP Tools (Cloud Run, Cloud Storage, Artifact Registry and Application Load Balancer)
+- GitHub Actions (planned)
 
 Resume Access:
 My resume content is embedded within this website. Alternatively, you can view it directly at: ymoraes.com
