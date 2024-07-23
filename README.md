@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+Interactive Resume & Technical Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my resume! This project serves as a portfolio showcasing my technical skills and my willingness to learn new technologies.
 
-## Available Scripts
+Project Goals:
 
-In the project directory, you can run:
+Learning: This project started as a self-improvement initiative to explore new technologies like Node.js and gain experience with DevOps and cloud tools. 
+Customization: I built a basic website using Node.js and customized it by creating a logo, adjusting the design integrating my resume content. Feel free to suggest further improvements!
+Deployment Exploration: I initially aimed for deployment on an AWS EC2 instance using Docker Compose. While I encountered some initial challenges, I gained valuable experience deploying containers and using Nginx as a reverse proxy. Subsequently, I experimented with CloudFormation for automated deployment. 
+Cloud Migration: To explore cloud migration and to work with a serverless tool, I migrated the application to Google Cloud Platform (GCP) using Cloud Run for container deployment.
+Infrastructure as Code: I leveraged Terraform, a technology I have professional experience with, for infrastructure provisioning on GCP. 
+CI/CD (Planned): My next steps include integrating a CI/CD pipeline using GitHub Actions, a tool I'm familiar with from previous production environments.
+Downloadable Resume (Planned): I'm planning to implement a feature that allows users to download a PDF version of my resume, aiming to learn PDF generation in the process. 
+Technologies Used:
 
-### `npm start`
+Node.js
+Docker
+Terraform
+AWS Tools (AWS EC2, S3, ECR.)
+GCP Tools (Cloud Run, Cloud Storage, Artifact Registry and Application Load Balancer)
+GitHub Actions (planned)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Resume Access:
+My resume content is embedded within this website. Alternatively, you can view it directly at: ymoraes.com
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feedback Welcome:
+I value your feedback! Please share your thoughts and suggestions on this project and my technical skills. 
